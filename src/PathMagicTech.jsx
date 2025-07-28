@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './PathMagicTech.css';
+import emailjs from '@emailjs/browser';
+
 const PathMagicTech = () => {
   const [activePage, setActivePage] = useState('home');
   const [formData, setFormData] = useState({
@@ -25,7 +27,29 @@ const PathMagicTech = () => {
   };
 
   const handleSubmit = () => {
-    alert('Thank you for your inquiry! We\'ll get back to you within 24 hours.');
+    const templateParams = {...formData };
+    emailjs
+      .send('service_e5p2zw8', 'template_dfwdei7', templateParams, {
+        publicKey: 'dEz55kIY-mricyQxF',
+      })
+      .then(
+        () => {
+          setFormData({
+            name: '',
+            email: '',
+            company: '',
+            service: '',
+            budget: '',
+            message: ''
+          });
+          console.log('SUCCESS!');
+          alert('Thank you for your inquiry! We\'ll get back to you within 24 hours.');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+
   };
 
   return (
@@ -174,7 +198,7 @@ const PathMagicTech = () => {
           
           <div className="contact-container">
             <div className="contact-form">
-              <h3 style={{ marginBottom: '2rem', color: '#f1f5f9' }}>Request a Quote</h3>
+              <h3 style={{ marginBottom: '2rem', color: '#f1f5f9' }}>Introduce Yourself!</h3>
               <div>
                 <div className="form-group">
                   <label htmlFor="name">Full Name</label>
@@ -256,14 +280,14 @@ const PathMagicTech = () => {
                   />
                 </div>
                 
-                <button onClick={handleSubmit} className="cta-button" style={{ width: '100%' }}>Send Quote Request</button>
+                <button onClick={handleSubmit} className="cta-button" style={{ width: '100%' }}>Send</button>
               </div>
             </div>
             
             <div className="contact-info">
               <div className="contact-item">
                 <h3>📧 Email Us</h3>
-                <p>hello@pathmagictech.com</p>
+                <p>hello@pathmagic.tech</p>
                 <p>For general inquiries and project discussions</p>
               </div>
               
