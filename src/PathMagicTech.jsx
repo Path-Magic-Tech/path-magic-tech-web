@@ -33,7 +33,7 @@ const PathMagicTech = () => {
 
       <header>
         <nav>
-          <a onClick={() => showPage('home')} className="logo">Path Magic Tech</a>
+          <a onClick={() => showPage('home')} className="logo">PMT</a>
           <ul className="nav-links">
             <li><a onClick={() => showPage('home')} className={activePage === 'home' ? 'active' : ''}>Home</a></li>
             <li><a onClick={() => showPage('bio')} className={activePage === 'bio' ? 'active' : ''}>Team</a></li>

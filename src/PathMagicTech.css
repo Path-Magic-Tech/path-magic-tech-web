@@ -54,6 +54,7 @@ nav {
   text-decoration: none;
   text-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
   cursor: pointer;
+  margin-top: 2rem;
 }
 
 .nav-links {
