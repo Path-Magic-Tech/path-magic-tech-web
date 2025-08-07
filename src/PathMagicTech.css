@@ -37,6 +37,18 @@ header {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 600px) {
+  .nav-links {
+    justify-content: center;
+    width: 100%;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .logo {
+    display: none;
+  }
+}
+
 nav {
   display: flex;
   justify-content: space-between;
