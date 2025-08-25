@@ -110,7 +110,7 @@ const PathMagicTech = () => {
           <div className="team-grid">
             <div className="team-member">
               <div className="member-avatar" style={{ width: '110px', height: '110px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '0.5rem', maxWidth: '100%', maxHeight: '100%' }}>
-                <img src="/katie.PNG" alt="Katie Nibbi" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                <img src="/katie.PNG" alt="Katie Nibbi" style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'bottom' }} />
               </div>
               <h3 className="member-name">Katie Nibbi</h3>
               <p className="member-role">Chief Executive Officer</p>
@@ -145,7 +145,7 @@ const PathMagicTech = () => {
               </p>
                 <br />
               <p className="member-bio">
-                His career spans biotech, payment processing and POS systems, and robotics, where he developed first of their kind 
+                His career highlights include biotech, payment processing / POS systems, and robotics, where he developed first of their kind 
                 automation platforms and advanced visualization tools. Conor has led engineering organizations through periods of 
                 rapid growth, bringing together teams, processes, and technology to deliver at scale. 
                 His architectural vision and technical depth set the foundation for solutions that stand the test of time.
