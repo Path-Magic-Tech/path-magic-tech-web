@@ -109,24 +109,80 @@ const PathMagicTech = () => {
           
           <div className="team-grid">
             <div className="team-member">
-              <div className="member-avatar">KN</div>
+              <div className="member-avatar" style={{ width: '110px', height: '110px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '0.5rem', maxWidth: '100%', maxHeight: '100%' }}>
+                <img src="/src/assets/katie.PNG" alt="Katie Nibbi" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </div>
               <h3 className="member-name">Katie Nibbi</h3>
               <p className="member-role">Chief Executive Officer</p>
-              <p className="member-bio">Katie leads Path Magic Tech with a vision for innovative software solutions that drive business growth. With extensive experience in strategic planning and client relations, she ensures every project aligns with our clients' long-term objectives and delivers measurable results.</p>
+              <p className="member-bio">
+                Katie Nibbi, our CTO, brings a strong legal background from her work at Gordon, Reese, Scully, 
+                where she specialized in corporate law and compliance. She oversees all legal affairs at Path Magic Tech, 
+                ensuring the company operates on a solid foundation.
+              </p>
+              <br />
+              <p className="member-bio">
+                Her expertise spans intellectual property protection, regulatory compliance, and contract negotiations. 
+                Katie’s strategic counsel safeguards our interests while enabling growth across product development, partnerships, 
+                and market expansion.
+              </p>
+              <br />
+              <p className="member-bio">
+                Outside of work, Katie enjoys spending time with her dogs and exploring the outdoors through hiking, bringing the 
+                same balance of focus and energy to her personal life that she brings to her role.
+              </p>
             </div>
             
             <div className="team-member">
-              <div className="member-avatar">CS</div>
+              <div className="member-avatar" style={{ width: '110px', height: '110px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '0.5rem', maxWidth: '100%', maxHeight: '100%' }}>
+                <img src="/src/assets/conor.PNG" alt="Conor Souhrada" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </div>
               <h3 className="member-name">Conor Souhrada</h3>
               <p className="member-role">Chief Technology Officer</p>
-              <p className="member-bio">Conor brings deep technical expertise and architectural vision to every project. His passion for cutting-edge technologies and commitment to code excellence ensures that Path Magic Tech delivers robust, scalable solutions that stand the test of time.</p>
+              <p className="member-bio">
+                Conor Souhrada, our CTO, leads Path Magic Tech’s engineering organization with proven expertise in scaling startups and 
+                designing resilient software architecture. He has guided companies from early-stage to generating multi-million
+                 dollars in monthly revenue through robust infrastructure and system design.
+              </p>
+                <br />
+              <p className="member-bio">
+                His career spans biotech, payment processing and POS systems, and robotics, where he developed first of their kind 
+                automation platforms and advanced visualization tools. Conor has led engineering organizations through periods of 
+                rapid growth, bringing together teams, processes, and technology to deliver at scale. 
+                His architectural vision and technical depth set the foundation for solutions that stand the test of time.
+              </p>
+                <br />
+              <p className="member-bio">
+                Outside of work, Conor is a dedicated climber and ultra runner. The same drive and persistence that 
+                push him up mountains and across long distances fuel his approach to engineering, always pushing limits and 
+                striving for excellence.
+              </p>
+                <br />
             </div>
             
             <div className="team-member">
-              <div className="member-avatar">KH</div>
-              <h3 className="member-name">Kaleb Hundersarck</h3>
+              <div className="member-avatar" style={{ width: '110px', height: '110px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '0.5rem', maxWidth: '100%', maxHeight: '100%' }}>
+                <img src="/src/assets/kaleb.PNG" alt="Kaleb Hundersmark" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              </div>
+              <h3 className="member-name">Kaleb Hundersmarck</h3>
               <p className="member-role">Chief Product Officer</p>
-              <p className="member-bio">Kaleb bridges the gap between user needs and technical capabilities. His user-centric approach and product strategy expertise ensure that every solution we build not only functions flawlessly but creates exceptional user experiences.</p>
+              <p className="member-bio">
+                Kaleb Hundersmarck, our CPO, brings expertise in automation and software development to Path Magic Tech. 
+                He has overseen product deployment and development on an international scale, combining technical depth with 
+                a clear product vision.
+              </p>
+                <br />
+              <p className="member-bio">
+                With experience at major enterprises like Apple and a diverse background in robotics, Kaleb has successfully 
+                led both large organizational initiatives and nimble remote engineering teams. His ability to bridge product 
+                strategy with technical execution ensures our solutions deliver impact at scale.
+              </p>
+                <br />
+              <p className="member-bio">
+                Outside of work, Kaleb is an avid climber and snowboarder who enjoys live music at festivals and concerts. 
+                Most importantly, he values spending quality time with his family, bringing the same passion and dedication 
+                to his personal life that he applies to building exceptional products.
+              </p>
+                <br />
             </div>
           </div>
         </div>
