@@ -110,7 +110,7 @@ const PathMagicTech = () => {
           <div className="team-grid">
             <div className="team-member">
               <div className="member-avatar" style={{ width: '110px', height: '110px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '0.5rem', maxWidth: '100%', maxHeight: '100%' }}>
-                <img src="/src/assets/katie.PNG" alt="Katie Nibbi" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                <img src="/katie.PNG" alt="Katie Nibbi" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
               </div>
               <h3 className="member-name">Katie Nibbi</h3>
               <p className="member-role">Chief Executive Officer</p>
@@ -134,7 +134,7 @@ const PathMagicTech = () => {
             
             <div className="team-member">
               <div className="member-avatar" style={{ width: '110px', height: '110px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '0.5rem', maxWidth: '100%', maxHeight: '100%' }}>
-                <img src="/src/assets/conor.PNG" alt="Conor Souhrada" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                <img src="/conor.PNG" alt="Conor Souhrada" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
               </div>
               <h3 className="member-name">Conor Souhrada</h3>
               <p className="member-role">Chief Technology Officer</p>
@@ -161,7 +161,7 @@ const PathMagicTech = () => {
             
             <div className="team-member">
               <div className="member-avatar" style={{ width: '110px', height: '110px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '0.5rem', maxWidth: '100%', maxHeight: '100%' }}>
-                <img src="/src/assets/kaleb.PNG" alt="Kaleb Hundersmark" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                <img src="/kaleb.PNG" alt="Kaleb Hundersmark" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
               </div>
               <h3 className="member-name">Kaleb Hundersmarck</h3>
               <p className="member-role">Chief Product Officer</p>
