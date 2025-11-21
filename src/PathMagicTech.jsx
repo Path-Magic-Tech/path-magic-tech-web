@@ -1,60 +1,16 @@
 import { useState } from 'react';
 import './PathMagicTech.css';
-import emailjs from '@emailjs/browser';
 
 const PathMagicTech = () => {
   const [activePage, setActivePage] = useState('home');
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    service: '',
-    budget: '',
-    message: ''
-  });
 
   const showPage = (pageId) => {
     setActivePage(pageId);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = () => {
-    const templateParams = {...formData };
-    emailjs
-      .send('service_e5p2zw8', 'template_dfwdei7', templateParams, {
-        publicKey: 'dEz55kIY-mricyQxF',
-      })
-      .then(
-        () => {
-          setFormData({
-            name: '',
-            email: '',
-            company: '',
-            service: '',
-            budget: '',
-            message: ''
-          });
-          console.log('SUCCESS!');
-          alert('Thank you for your inquiry! We\'ll get back to you within 24 hours.');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-
-  };
-
   return (
     <div className="app-container">
-
       <header>
         <nav>
           <a onClick={() => showPage('home')} className="logo">PMT</a>
@@ -106,7 +62,6 @@ const PathMagicTech = () => {
         <div className="container">
           <h2 className="section-title">Meet Our Team</h2>
           <p className="section-subtitle">Three visionary leaders with a shared passion for transforming businesses through innovative technology solutions.</p>
-          
           <div className="team-grid">
             <div className="team-member">
               <div className="member-avatar" style={{ width: '110px', height: '110px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '0.5rem', maxWidth: '100%', maxHeight: '100%' }}>
@@ -131,7 +86,6 @@ const PathMagicTech = () => {
                 same balance of focus and energy to her personal life that she brings to her role.
               </p>
             </div>
-            
             <div className="team-member">
               <div className="member-avatar" style={{ width: '110px', height: '110px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '0.5rem', maxWidth: '100%', maxHeight: '100%' }}>
                 <img src="/conor.PNG" alt="Conor Souhrada" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
@@ -141,24 +95,23 @@ const PathMagicTech = () => {
               <p className="member-bio">
                 Conor Souhrada, our CTO, leads Path Magic Tech’s engineering organization with proven expertise in scaling startups and 
                 designing resilient software architecture. He has guided companies from early-stage to generating multi-million
-                 dollars in monthly revenue through robust infrastructure and system design.
+                dollars in monthly revenue through robust infrastructure and system design.
               </p>
-                <br />
+              <br />
               <p className="member-bio">
                 His career highlights include biotech, payment processing / POS systems, and robotics, where he developed first of their kind 
                 automation platforms and advanced visualization tools. Conor has led engineering organizations through periods of 
                 rapid growth, bringing together teams, processes, and technology to deliver at scale. 
                 His architectural vision and technical depth set the foundation for solutions that stand the test of time.
               </p>
-                <br />
+              <br />
               <p className="member-bio">
                 Outside of work, Conor is a dedicated climber and ultra runner. The same drive and persistence that 
                 push him up mountains and across long distances fuel his approach to engineering, always pushing limits and 
                 striving for excellence.
               </p>
-                <br />
+              <br />
             </div>
-            
             <div className="team-member">
               <div className="member-avatar" style={{ width: '110px', height: '110px', borderRadius: '50%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '0.5rem', maxWidth: '100%', maxHeight: '100%' }}>
                 <img src="/kaleb.PNG" alt="Kaleb Hundersmark" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
@@ -170,19 +123,19 @@ const PathMagicTech = () => {
                 He has overseen product deployment and development on an international scale, combining technical depth with 
                 a clear product vision.
               </p>
-                <br />
+              <br />
               <p className="member-bio">
                 With experience at major enterprises like Apple and a diverse background in robotics, Kaleb has successfully 
                 led both large organizational initiatives and nimble remote engineering teams. His ability to bridge product 
                 strategy with technical execution ensures our solutions deliver impact at scale.
               </p>
-                <br />
+              <br />
               <p className="member-bio">
                 Outside of work, Kaleb is an avid climber and snowboarder who enjoys live music at festivals and concerts. 
                 Most importantly, he values spending quality time with his family, bringing the same passion and dedication 
                 to his personal life that he applies to building exceptional products.
               </p>
-                <br />
+              <br />
             </div>
           </div>
         </div>
@@ -193,7 +146,6 @@ const PathMagicTech = () => {
         <div className="container">
           <h2 className="section-title">Our Services & Partners</h2>
           <p className="section-subtitle">Comprehensive software consultation services backed by strategic partnerships with industry leaders.</p>
-          
           <div className="offerings-grid">
             <div className="offering">
               <h3>Software Architecture & Design</h3>
@@ -206,7 +158,6 @@ const PathMagicTech = () => {
                 <li>Performance optimization</li>
               </ul>
             </div>
-
             <div className="offering">
               <h3>Custom Development</h3>
               <p>End-to-end development services for web, mobile, and enterprise applications.</p>
@@ -218,7 +169,6 @@ const PathMagicTech = () => {
                 <li>Cloud deployment</li>
               </ul>
             </div>
-
             <div className="offering">
               <h3>Digital Transformation</h3>
               <p>Modernize your business processes with cutting-edge technology solutions.</p>
@@ -230,7 +180,6 @@ const PathMagicTech = () => {
                 <li>Digital workflow optimization</li>
               </ul>
             </div>
-
             <div className="offering">
               <h3>Strategic Partnerships</h3>
               <p>Leveraging our network of technology partners to deliver comprehensive solutions.</p>
@@ -246,120 +195,37 @@ const PathMagicTech = () => {
         </div>
       </div>
 
-      {/* Contact Page */}
+      {/* Contact Page (mailto version) */}
       <div id="contact" className={`page ${activePage === 'contact' ? 'active' : ''}`}>
         <div className="container">
           <h2 className="section-title">Get in Touch</h2>
-          <p className="section-subtitle">Ready to transform your software vision into reality? Let's discuss your project and create something amazing together.</p>
-          
-          <div className="contact-container">
-            <div className="contact-form">
-              <h3 style={{ marginBottom: '2rem', color: '#f1f5f9' }}>Introduce Yourself!</h3>
-              <div>
-                <div className="form-group">
-                  <label htmlFor="name">Full Name</label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required 
-                  />
-                </div>
-                
-                <div className="form-group">
-                  <label htmlFor="email">Email Address</label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required 
-                  />
-                </div>
-                
-                <div className="form-group">
-                  <label htmlFor="company">Company</label>
-                  <input 
-                    type="text" 
-                    id="company" 
-                    name="company" 
-                    value={formData.company}
-                    onChange={handleInputChange}
-                  />
-                </div>
-                
-                <div className="form-group">
-                  <label htmlFor="service">Service Needed</label>
-                  <select 
-                    id="service" 
-                    name="service" 
-                    value={formData.service}
-                    onChange={handleInputChange}
-                    required
-                  >
-                    <option value="">Select a service</option>
-                    <option value="architecture">Software Architecture & Design</option>
-                    <option value="development">Custom Development</option>
-                    <option value="transformation">Digital Transformation</option>
-                    <option value="consultation">General Consultation</option>
-                  </select>
-                </div>
-                
-                <div className="form-group">
-                  <label htmlFor="budget">Project Budget Range</label>
-                  <select 
-                    id="budget" 
-                    name="budget" 
-                    value={formData.budget}
-                    onChange={handleInputChange}
-                  >
-                    <option value="">Select budget range</option>
-                    <option value="under-50k">Under $50,000</option>
-                    <option value="50k-100k">$50,000 - $100,000</option>
-                    <option value="100k-250k">$100,000 - $250,000</option>
-                    <option value="250k-plus">$250,000+</option>
-                  </select>
-                </div>
-                
-                <div className="form-group">
-                  <label htmlFor="message">Project Description</label>
-                  <textarea 
-                    id="message" 
-                    name="message" 
-                    rows="4" 
-                    placeholder="Tell us about your project, goals, and any specific requirements..."
-                    value={formData.message}
-                    onChange={handleInputChange}
-                  />
-                </div>
-                
-                <button onClick={handleSubmit} className="cta-button" style={{ width: '100%' }}>Send</button>
-              </div>
-            </div>
-            
-            <div className="contact-info">
+          <p className="section-subtitle">Email us directly with your project details. We reply within 24 hours.</p>
+          <div className="contact-container" style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
+            <div className="contact-info" style={{ flex: '1 1 320px', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <div className="contact-item">
                 <h3>📧 Email Us</h3>
-                <p>hello@pathmagic.tech</p>
-                <p>For general inquiries and project discussions</p>
+                <p>
+                  <a
+                    href="mailto:hello@pathmagic.tech?subject=Project%20Inquiry&body=Hi%20Path%20Magic%20Tech,%0A%0AMy%20name%20is%20...%0ACompany:%20...%0AService%20Needed:%20Architecture/Development/Transformation/Consultation%0ABudget%20Range:%20...%0AProject%20Description:%20...%0A%0AThanks!"
+                    className="cta-button"
+                    style={{ display: 'inline-block', marginTop: '0.5rem' }}
+                  >
+                    hello@pathmagic.tech
+                  </a>
+                </p>
+                <p>Use the template to speed things up.</p>
               </div>
-              
               <div className="contact-item">
                 <h3>📞 Schedule a Call</h3>
-                <p>Book a consultation call to discuss your project in detail and explore how we can help bring your vision to life.</p>
+                <p>Add preferred times in your email. We’ll confirm quickly.</p>
               </div>
-              
               <div className="contact-item">
                 <h3>⚡ Quick Response</h3>
-                <p>We typically respond to all inquiries within 24 hours. For urgent projects, we offer expedited consultation scheduling.</p>
+                <p>Replies within 24h.</p>
               </div>
-              
               <div className="contact-item">
-                <h3>🤝 Partnership Opportunities</h3>
-                <p>Interested in partnering with Path Magic Tech? We're always open to strategic collaborations and technology partnerships.</p>
+                <h3>🤝 Partnerships</h3>
+                <p>Partnership Opportunity for collaboration inquiries.</p>
               </div>
             </div>
           </div>
@@ -368,5 +234,4 @@ const PathMagicTech = () => {
     </div>
   );
 };
-
 export default PathMagicTech;
